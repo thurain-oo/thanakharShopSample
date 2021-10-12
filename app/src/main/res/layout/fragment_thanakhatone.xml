@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.ThanakhatoneFragment"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="thanakhatoneFragment"
+            type="com.example.puutuumommy.ui.ThanakhatoneFragment" />
+        <variable
+            name="sharedViewModel"
+            type="com.example.puutuumommy.model.OrderViewModel" />
+    </data>
+
+<ScrollView
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+>
+   <androidx.recyclerview.widget.RecyclerView
+
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/thanakhatone_type_recycler_view"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+       tools:listitem="@layout/thanakatone_adapter_item"
+       android:scrollbars="vertical"
+       />
+
+
+</ScrollView>
+
+</layout>

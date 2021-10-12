@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.AddressFragment">
+    <data>
+        <variable
+            name="addressFragment"
+            type="com.example.puutuumommy.ui.AddressFragment" />
+        <variable
+            name="sharedViewModel"
+            type="com.example.puutuumommy.model.OrderViewModel" />
+    </data>
+        <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:padding="16dp"
+         tools:ignore="MissingClass">
+
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/address"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintEnd_toEndOf="parent"
+             android:hint="Please Enter Your Address for Delivery"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent">
+
+             <com.google.android.material.textfield.TextInputEditText
+                 android:id="@+id/address_edit_text"
+                 android:layout_width="match_parent"
+                 android:text="@{sharedViewModel.address}"
+                 android:lineSpacingMultiplier="10"
+                 android:layout_height="wrap_content"
+                 android:inputType="text"/>
+         </com.google.android.material.textfield.TextInputLayout>
+
+         <View
+             android:id="@+id/divider"
+             android:layout_width="409dp"
+             android:layout_height="1dp"
+             android:layout_marginTop="6dp"
+             android:background="?android:attr/listDivider"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/phone_no"
+             tools:ignore="MissingConstraints" />
+         <TextView
+             android:hint="Sub Total"
+             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+             android:id="@+id/sub_total"
+             android:text="@{@string/total_price(sharedViewModel.totalPrice.toString)}"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintBottom_toTopOf="@id/button2"
+             app:layout_constraintTop_toBottomOf="@id/divider"
+             app:layout_constraintEnd_toEndOf="parent"
+             />
+         <com.google.android.material.textfield.TextInputLayout
+             android:id="@+id/phone_no"
+             android:layout_width="match_parent"
+             android:layout_marginTop="16dp"
+             android:layout_height="wrap_content"
+             app:layout_constraintEnd_toEndOf="parent"
+             android:hint="Please Enter Your Phone Number.."
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/address">
+
+             <com.google.android.material.textfield.TextInputEditText
+                 android:id="@+id/phone_no_edit_text"
+                 android:layout_width="match_parent"
+                 android:lineSpacingMultiplier="10"
+                 android:layout_height="wrap_content"
+                 android:text="@{sharedViewModel.phone}"
+                 android:inputType="phone"/>
+         </com.google.android.material.textfield.TextInputLayout>
+
+         <Button
+             android:id="@+id/button"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="16dp"
+             android:text="Cancel"
+             android:onClick="@{()->addressFragment.orderCancel()}"
+             app:layout_constraintEnd_toStartOf="@+id/button2"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/sub_total" />
+
+         <Button
+             android:id="@+id/button2"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="16dp"
+             android:text="Next"
+             android:onClick="@{()->addressFragment.goToNextScreen()}"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintHorizontal_bias="1.0"
+             app:layout_constraintStart_toEndOf="@+id/button"
+             app:layout_constraintTop_toTopOf="@+id/button" />
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+     </ScrollView>
+
+
+</layout>

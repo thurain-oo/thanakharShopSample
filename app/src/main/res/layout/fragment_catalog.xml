@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="sharedViewModel"
+            type="com.example.puutuumommy.model.OrderViewModel" />
+        <variable
+            name="catalogFrament"
+            type="com.example.puutuumommy.ui.CatalogFragment" />
+    </data>
+<FrameLayout
+
+    android:background="@drawable/clouds_5879037_960_720"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    tools:context=".ui.CatalogFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:spanCount="2"
+        android:id="@+id/catalog_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/catalog_item" />
+
+</FrameLayout>
+</layout>

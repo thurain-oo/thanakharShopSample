@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">LetsCook</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="total_price">Total : %s Ks</string>
+    <plurals name="quantity_of_thanakha_tone">
+        <item quantity="one">%d pc</item>
+        <item quantity="other">%d pcs</item>
+    </plurals>
+    <string name="order_details">Item Type:    Thanakhar Tone \n Price Per Item :    %1$s \n Quantity:    %2$s\n Address:     %3$s \n Phone: %4$s \n
+        Total:    %5$s Ks \n\n Thank you!</string>
+
+    <string name="catalogItem1">Thanakha Tone</string>
+    <string name="catalogItem2">Thanakha Powder</string>
+    <string name="catalogItem3">Thanakha Tree</string>
+    <string name="catalogItem4">Thanakha Cream</string>
+    <string name="catalogItem5">Thanakha A khae</string>
+    <string name="property">Length : 7inches</string>
+    <string name="price_for_thanakha_tone1">1500</string>
+    <string name="price_for_thanakha_tone2">2500</string>
+    <string name="price_for_thanakha_tone3">3000</string>
+    <string name="price_for_thanakha_tone4">4500</string>
+    <string name="price_for_thanakha_tone5">5000</string>
+
+
+
+
+</resources>
